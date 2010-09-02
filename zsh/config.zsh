@@ -3,9 +3,10 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
+#export PS1="\w \[\033[40;37m\]\$(parse_git_branch) \[\033[00m\] $\[\033[00m\] "
 
 export EDITOR='mate -w'
-export PATH=".:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH"
+export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$ZSH/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
