@@ -1,0 +1,6 @@
+[user]
+	name = Matt Kirchstein
+	email = mkirchstein@gild.com
+[core]
+	packedGitLimit = 100m
+	packedGitWindowSize = 16m

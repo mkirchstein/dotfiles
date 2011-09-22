@@ -13,3 +13,7 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# PAC Specific
+alias gcmm='git commit -m "[#$1 state:resolved responsible:Mark Mastoras]"'
+alias ghig="git push && integrity-growl-watcher"

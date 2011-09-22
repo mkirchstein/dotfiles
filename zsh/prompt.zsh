@@ -52,7 +52,7 @@ need_push () {
 rvm_prompt(){
   if $(which rvm &> /dev/null)
   then
-	  echo "%{\e[1;33m%}$(~/.rvm/bin/rvm-prompt i)%{\e[0m%} · "
+	  echo "%{\e[1;33m%}$(~/.rvm/bin/rvm-prompt v g)%{\e[0m%} · "
 	else
 	  echo ""
   fi
