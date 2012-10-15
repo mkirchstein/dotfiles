@@ -8,7 +8,7 @@ fi
 
 
 export EDITOR='mate -w'
-export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/opt/local/sbin:$ZSH/bin:$PATH"
+export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/opt/local/sbin:~/Dev/android-sdk-macosx/tools:~/Dev/android-sdk-macosx/platform-tools:$ZSH/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
