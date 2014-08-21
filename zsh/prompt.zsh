@@ -3,11 +3,21 @@ autoload colors && colors
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
 git_branch() {
-  echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $(/usr/local/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+}
+
+git_branch_prompt() {
+  print $(git_branch)
+  #if $(git_branch)
+  #then
+  #  echo "on (%{$fg_bold[yellow]%}$(git_branch)%{$reset_color%})"
+  #else
+  #  echo ""
+  #fi
 }
 
 git_dirty() {
-  st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
+  st=$(/usr/local/bin/git status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
   then
     echo ""
@@ -22,13 +32,13 @@ git_dirty() {
 }
 
 git_prompt_info () {
- ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
+ ref=$(/usr/local/bin/git symbolic-ref HEAD 2>/dev/null) || return
 # echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
  echo "${ref#refs/heads/}"
 }
 
 unpushed () {
-  /usr/bin/git cherry -v origin/$(git_branch) 2>/dev/null
+  /usr/local/bin/git cherry -v origin/$(git_branch) 2>/dev/null
 }
 
 need_push () {
@@ -72,7 +82,9 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
+#export PROMPT=$'\n$(rvm_prompt) in $(directory_name) $(git_branch_prompt) $(git_dirty)$(need_push)\n› '
 export PROMPT=$'\n$(rvm_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+
 set_prompt () {
   export RPROMPT="%{$fg_bold[grey]%}$(todo)%{$reset_color%}"
 }

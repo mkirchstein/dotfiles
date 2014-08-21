@@ -1,17 +1,21 @@
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  #export PS1='%3~$(git_info_for_prompt)%# '
-  export PS1='%{$reset_color$fg[blue]%}$(rvm_prompt)%{$reset_color$fg[gray]%}:%1~%{$reset_color$bold_color$fg[green]%}%{$reset_color$fg[green]%}$(parse_git_branch)>%{$reset_color%} '
-fi
-#export PS1="\w \[\033[40;37m\]\$(parse_git_branch) \[\033[00m\] $\[\033[00m\] "
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export PS1='%m:%3~$(git_info_for_prompt)%# '
+# else
+#   #export PS1='%3~$(git_info_for_prompt)%# '
+#   export PS1='%{$reset_color$fg[blue]%}$(rvm_prompt)%{$reset_color$fg[gray]%}:%1~%{$reset_color$bold_color$fg[green]%}%{$reset_color$fg[green]%}$(parse_git_branch)>%{$reset_color%} '
+# fi
+# #export PS1="\w \[\033[40;37m\]\$(parse_git_branch) \[\033[00m\] $\[\033[00m\] "
 
 
-export EDITOR='mate -w'
-export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/opt/local/sbin:$ZSH/bin:$PATH"
+export EDITOR='subl'
+export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/opt/local/sbin:$HOME/.tmuxifier/bin:$ZSH/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+
+# For Google Dev Tools
+export PATH="$PATH:/Users/matt/Dev/depot_tools"
+
 
 fpath=($ZSH/zsh/functions $fpath)
 

@@ -1,6 +1,14 @@
 [user]
 	name = Matt Kirchstein
-	email = mkirchstein@gild.com
+	email = mkirchstein@gmail.com
 [core]
 	packedGitLimit = 100m
 	packedGitWindowSize = 16m
+[mergetool]
+	keepBackup = false
+[merge]
+	tool = opendiff
+[diff]
+	tool = opendiff
+[push]
+	default = simple
