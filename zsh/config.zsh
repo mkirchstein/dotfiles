@@ -8,7 +8,7 @@
 
 
 export EDITOR='subl'
-export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/opt/local/sbin:$HOME/.tmuxifier/bin:$ZSH/bin:$PATH"
+export PATH=".:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/usr/local/mysql/bin:/opt/local/sbin:$HOME/.tmuxifier/bin:$HOME/bin:$ZSH/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
@@ -17,9 +17,9 @@ export CLICOLOR=true
 export PATH="$PATH:/Users/matt/Dev/depot_tools"
 
 
-fpath=($ZSH/zsh/functions $fpath)
+# fpath=($ZSH/zsh/functions $fpath)
 
-autoload -U $ZSH/zsh/functions/*(:t)
+# autoload -U $ZSH/zsh/functions/*(:t)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
